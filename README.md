@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project presents an Arduino-based Predictive Maintenance System designed for industrial motor monitoring. The system continuously monitors motor operating conditions using temperature and vibration measurements to detect potential faults before they result in equipment failure.
+This project presents an **Arduino-based Predictive Maintenance System** designed for industrial motor monitoring. The system continuously monitors motor operating conditions using temperature and vibration measurements to detect potential faults before they lead to equipment failure.
 
-The implementation demonstrates the fundamental concepts of predictive maintenance used in modern industries, where machine condition data is analyzed to identify abnormal behavior and reduce unexpected downtime.
+The implementation demonstrates the fundamental concepts of predictive maintenance used in modern industries, where machine condition data is analyzed to identify abnormal behavior, improve reliability, and reduce unexpected downtime.
 
-The system provides real-time status indication through LEDs, an audible alarm, and motor control actions based on detected operating conditions.
+The system provides real-time status indication through LEDs, an audible alarm, and automatic motor control actions based on detected operating conditions.
 
 ---
 
@@ -49,10 +49,12 @@ The system provides real-time status indication through LEDs, an audible alarm, 
 
 ### Healthy Condition
 
+**Conditions**
+
 * Temperature < 40°C
 * No vibration detected
 
-Actions:
+**Actions**
 
 * Green LED ON
 * Motor Running
@@ -62,13 +64,15 @@ Actions:
 
 ### Warning Condition
 
+**Conditions**
+
 * Temperature between 40°C and 80°C
 
-OR
+**OR**
 
 * Vibration detected
 
-Actions:
+**Actions**
 
 * Red LED ON
 * Motor Running
@@ -78,9 +82,11 @@ Actions:
 
 ### Fault Condition
 
+**Conditions**
+
 * Temperature > 80°C
 
-Actions:
+**Actions**
 
 * Red LED ON
 * Buzzer ON
@@ -105,15 +111,29 @@ Actions:
 ## Software Requirements
 
 * Arduino IDE
-* Tinkercad Circuits (for simulation)
+* Tinkercad Circuits
 
 ---
 
-## Simulation
+## Tinkercad Simulation
 
-The project was developed and tested using Tinkercad Circuits.
+The project can be simulated online using Tinkercad:
 
-The TMP36 sensor is used to simulate motor temperature, while a push button is used to emulate vibration events because Tinkercad does not provide an SW-420 vibration sensor.
+**Simulation Link**
+
+https://www.tinkercad.com/things/g3JQVt0CNUX-predictive-maintenance-system?sharecode=MHQ-SwZ0yH1kkrDmddMXHFO2Ly9UK6s7WuWeo0jvuN4
+
+---
+
+## Simulation Notes
+
+The TMP36 sensor is used to simulate motor temperature, while a push button is used to emulate vibration events because Tinkercad does not provide the SW-420 vibration sensor.
+
+During simulation:
+
+* Adjust TMP36 temperature values to test different operating conditions.
+* Press the push button to simulate abnormal vibration.
+* Observe LED indications, buzzer status, motor operation, and Serial Monitor messages.
 
 ---
 
@@ -135,12 +155,21 @@ The TMP36 sensor is used to simulate motor temperature, while a push button is u
 * Data logging and analytics
 * Machine learning-based fault prediction
 * Wireless monitoring using ESP32
+* Mobile application for remote monitoring
+
+---
+
+## Project Outcomes
+
+This project demonstrates how embedded systems can be used to implement basic predictive maintenance techniques by continuously monitoring machine conditions and responding to abnormal operating states.
+
+The system provides an educational platform for understanding fault detection, condition monitoring, motor control, and industrial automation concepts.
 
 ---
 
 ## Author
 
-RGPM RAMMANDALA 
+RGPM Rammandala
 
 Department of Electrical and Electronic Engineering
 
@@ -150,4 +179,4 @@ University of Jaffna
 
 ## License
 
-This project is intended for educational and academic purposes.
+This project is intended for educational and academic purposes only.
